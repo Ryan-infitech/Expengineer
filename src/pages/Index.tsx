@@ -149,21 +149,65 @@ const Index = () => {
             kreatif
           </p>
 
-          {/* Stats section - improved for mobile with 2 columns grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-8 md:mt-12 max-w-2xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center p-2 sm:p-3">
+          {/* Stats section - improved for mobile with custom layout */}
+          <div className="mt-6 sm:mt-8 md:mt-12 max-w-2xl mx-auto">
+            {/* Mobile layout: 2 top, 1 center bottom */}
+            <div className="grid grid-cols-2 gap-4 sm:hidden">
+              {/* First row - first two items */}
+              <div className="text-center p-2">
                 <div className="flex justify-center mb-2">
-                  <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-primary" />
+                  {React.createElement(stats[0].icon, { className: "w-5 h-5 text-primary" })}
                 </div>
-                <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary">
-                  {stat.value}
+                <div className="text-lg font-bold text-primary">
+                  {stats[0].value}
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground">
-                  {stat.label}
+                <div className="text-xs text-muted-foreground">
+                  {stats[0].label}
                 </div>
               </div>
-            ))}
+              <div className="text-center p-2">
+                <div className="flex justify-center mb-2">
+                  {React.createElement(stats[1].icon, { className: "w-5 h-5 text-primary" })}
+                </div>
+                <div className="text-lg font-bold text-primary">
+                  {stats[1].value}
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {stats[1].label}
+                </div>
+              </div>
+            </div>
+            {/* Second row - third item centered */}
+            <div className="flex justify-center mt-4 sm:hidden">
+              <div className="text-center p-2">
+                <div className="flex justify-center mb-2">
+                  {React.createElement(stats[2].icon, { className: "w-5 h-5 text-primary" })}
+                </div>
+                <div className="text-lg font-bold text-primary">
+                  {stats[2].value}
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {stats[2].label}
+                </div>
+              </div>
+            </div>
+            
+            {/* Desktop layout: 3 columns */}
+            <div className="hidden sm:grid sm:grid-cols-3 gap-6 md:gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center p-3">
+                  <div className="flex justify-center mb-2">
+                    <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+                  </div>
+                  <div className="text-xl md:text-2xl font-bold text-primary">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
