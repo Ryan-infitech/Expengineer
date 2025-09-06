@@ -18,7 +18,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-2 sm:py-4">
         {" "}
         {/* Reduced padding for mobile */}
-        <div className="flex items-center justify-between">
+  <div className="flex items-center justify-between relative">
           {/* Brand + Theme Toggle */}
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
@@ -38,7 +38,8 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-2">
+          {/* Centered Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
             {navItems.map((item) => (
               <Link
                 key={item.path}
