@@ -141,7 +141,7 @@ const Index = () => {
       {/* Hero Section - adjusted top padding to account for smaller header */}
       <section className="pt-14 sm:pt-16 md:pt-24 pb-6 sm:pb-8 md:pb-12 px-3 sm:px-6">
         <div className="container mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 pb-1 md:pb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             Expenginer
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed">
