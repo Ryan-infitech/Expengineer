@@ -19,17 +19,23 @@ const Header = () => {
         {" "}
         {/* Reduced padding for mobile */}
         <div className="flex items-center justify-between">
-          <Link
-            to="/"
-            className="flex items-center gap-1 sm:gap-2 text-lg sm:text-xl font-bold hover:text-primary transition-colors"
-          >
-            <img
-              src="/logo.jpg"
-              alt="Expenginer Logo"
-              className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
-            />
-            <span>Expenginer</span>
-          </Link>
+          {/* Brand + Theme Toggle */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              to="/"
+              className="flex items-center gap-1 sm:gap-2 text-lg sm:text-xl font-bold hover:text-primary transition-colors"
+            >
+              <img
+                src="/logo.jpg"
+                alt="Expenginer Logo"
+                className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+              />
+              <span>Expenginer</span>
+            </Link>
+            <div className="bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-lg p-1">
+              <ThemeToggle />
+            </div>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-2">
@@ -49,10 +55,6 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-2">
-            <div className="bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-lg p-1">
-              <ThemeToggle />
-            </div>
-
             {/* Mobile Menu Button - reduced size */}
             <button
               className="md:hidden p-1.5 sm:p-2 bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-lg hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-300"
