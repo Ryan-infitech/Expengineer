@@ -4,10 +4,14 @@
   "devCommand": "bun run dev",
   "installCommand": "bun install",
   "framework": "vite",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/google1fc89d12f729ae62.html",
+      "dest": "/google1fc89d12f729ae62.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
