@@ -1,13 +1,17 @@
 {
-  "buildCommand": "bun run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "devCommand": "bun run dev",
-  "installCommand": "bun install",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
   "framework": "vite",
   "routes": [
     {
       "src": "/google1fc89d12f729ae62.html",
       "dest": "/google1fc89d12f729ae62.html"
+    },
+    {
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|svg|mp3))",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
