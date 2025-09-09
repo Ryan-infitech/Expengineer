@@ -1,4 +1,12 @@
+<div align="right">
+
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=Ryan-infitech.Expengineer)
+
+</div>
+
 # Expengineer
+
+![preview](./public/preview.png)
 
 A modern React application built with Vite, TypeScript, and Tailwind CSS.
 
